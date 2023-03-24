@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import {
-  AiFillTwitterCircle,
+  AiOutlineMail,
   AiFillLinkedin,
   AiFillGithub,
 } from "react-icons/ai";
@@ -13,9 +13,6 @@ import consulting from "../public/consulting.png";
 import web1 from "../public/web1.png";
 import web2 from "../public/web2.png";
 import web3 from "../public/web3.png";
-import web4 from "../public/web4.png";
-import web5 from "../public/web5.png";
-import web6 from "../public/web6.png";
 import { useState } from "react";
 
 export default function Home() {
@@ -44,7 +41,7 @@ export default function Home() {
               <li>
                 <a
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
-                  href="#"
+                  href="public/Jaime D. Rodriguez Resume.pdf"
                   download
                 >
                   Resume
@@ -70,11 +67,11 @@ export default function Home() {
 
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
             <a
-              href="https://twitter.com/your_username"
+              href="mailto:rodriguez.d.jaime@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiFillTwitterCircle />
+              <AiOutlineMail />
             </a>
             <a
               href="https://www.linkedin.com/in/jaime-d-rodriguez"
@@ -156,14 +153,14 @@ export default function Home() {
                 height={100}
                 alt="Consulting icon"
               />
-              <h3 className="text-lg font-medium pt-8 pb-2">Laugages</h3>
+              <h3 className="text-lg font-medium pt-8 pb-2">Languages</h3>
               <p className="py-2">
                 A collection of helpful tools and platforms for version control,
                 code quality, package management, and development workflow
                 optimization in full-stack React projects.
               </p>
               <h4 className="py-4 text-teal-600">
-                Consulting services I provide
+                Programming languages I use
               </h4>
               <p className="text-gray-800 py-1">HTML</p>
               <p className="text-gray-800 py-1">CSS</p>
