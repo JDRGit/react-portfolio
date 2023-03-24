@@ -14,6 +14,7 @@ import web1 from "../public/web1.png";
 import web2 from "../public/web2.png";
 import web3 from "../public/web3.png";
 import { useState } from "react";
+import resume from "../public/resume.pdf";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -41,8 +42,8 @@ export default function Home() {
               <li>
                 <a
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
-                  href="public/Jaime D. Rodriguez Resume.pdf"
-                  download
+                  href={resume} 
+                  download="Jaime_D_Rodriguez_Resume.pdf"
                 >
                   Resume
                 </a>
