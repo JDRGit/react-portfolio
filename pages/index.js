@@ -1,10 +1,6 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import {
-  AiOutlineMail,
-  AiFillLinkedin,
-  AiFillGithub,
-} from "react-icons/ai";
+import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Image from "next/image";
 import dev from "../public/dev.png";
 import design from "../public/design.png";
@@ -35,14 +31,14 @@ export default function Home() {
               <li>
                 <BsFillMoonStarsFill
                   onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-2xl dark:text-gray-200"
+                  className="cursor-pointer text-2xl dark:text-gray-200  "
                 />
               </li>
 
               <li>
                 <a
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
-                  href={resume} 
+                  className="bg-gradient-to-r from-cyan-500 to-teal-500  text-white px-4 py-2 rounded-md ml-8 hover:from-pink-500 hover:to-yellow-500"
+                  href={resume}
                   download="Jaime_D_Rodriguez_Resume.pdf"
                 >
                   Resume
@@ -66,7 +62,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 ">
             <a
               href="mailto:rodriguez.d.jaime@gmail.com"
               target="_blank"
@@ -91,7 +87,12 @@ export default function Home() {
           </div>
 
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-            <Image src={dev} layout="fill" objectFit="scale-down" />
+            <Image
+              src={dev}
+              layout="fill"
+              objectFit="scale-down"
+              alt="developer"
+            />
           </div>
         </section>
         <section>
@@ -103,13 +104,11 @@ export default function Home() {
               November 2022 to March 2023. Throughout the course, I gained
               hands-on experience in web development, software engineering, and
               React development, which helped me build a progressive portfolio.
-               I have a strong
-              understanding of JavaScript and Computer Science concepts,
-              including object-oriented programming, Git, advanced HTML/CSS, and
-              Redux. I've built Single Page Applications and web applications
-              using React, gaining familiarity with client-side routing, AJAX,
-              Fetch, and the Context API.
-              My full stack
+              I have a strong understanding of JavaScript and Computer Science
+              concepts, including object-oriented programming, Git, advanced
+              HTML/CSS, and Redux. I've built Single Page Applications and web
+              applications using React, gaining familiarity with client-side
+              routing, AJAX, Fetch, and the Context API. My full stack
               development experience extends to Java and the Spring Boot
               framework, enabling me to create full CRUD applications, implement
               token-based authentication, and work with REST. I pride myself on
@@ -119,10 +118,10 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="lg:flex gap-10">
-            <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
+          <div className="lg:flex gap-10 ">
+            <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white ">
               <Image src={design} width={100} height={100} alt="Design icon" />
-              <h3 className="text-lg font-medium pt-8 pb-2">Frontend Tools</h3>
+              <h3 className="text-lg font-medium pt-8 pb-2 ">Frontend Tools</h3>
               <p className="py-2">
                 Essential libraries and frameworks for building and styling
                 responsive, dynamic, and user-friendly React user interfaces.
@@ -191,7 +190,7 @@ export default function Home() {
                 className="rounded-lg object-cover"
                 width={"100%"}
                 height={"100%"}
-                layout="responsive"
+                alt="E-commerce App"
               />
             </div>
             <div className="basis-1/3 flex-1">
@@ -201,7 +200,7 @@ export default function Home() {
                 className="rounded-lg object-cover"
                 width={"100%"}
                 height={"100%"}
-                layout="responsive"
+                alt="Fitness App"
               />
             </div>
             <div className="basis-1/3 flex-1">
@@ -211,62 +210,9 @@ export default function Home() {
                 className="rounded-lg object-cover"
                 width={"100%"}
                 height={"100%"}
-                layout="responsive"
+                alt="Social Media App"
               />
             </div>
-          </div>
-        </section>
-
-        <section>
-          <div className="bg-white p-8 rounded-lg shadow-md dark:bg-gray-800">
-            <h3 className="text-3xl py-1 dark:text-white">Contact Me (under construction)</h3>
-            <form className="mt-4">
-              <label
-                htmlFor="name"
-                className="block text-gray-700 dark:text-gray-200"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Your Name"
-                className="w-full p-2 mt-2 rounded-md border border-gray-300 dark:border-gray-500 dark:bg-gray-700 dark:text-white"
-              />
-
-              <label
-                htmlFor="email"
-                className="block mt-4 text-gray-700 dark:text-gray-200"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Your Email"
-                className="w-full p-2 mt-2 rounded-md border border-gray-300 dark:border-gray-500 dark:bg-gray-700 dark:text-white"
-              />
-
-              <label
-                htmlFor="message"
-                className="block mt-4 text-gray-700 dark:text-gray-200"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                placeholder="Your Message"
-                rows="6"
-                className="w-full p-2 mt-2 rounded-md border border-gray-300 dark:border-gray-500 dark:bg-gray-700 dark:text-white"
-              />
-
-              <button
-                type="submit"
-                className="mt-6 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md"
-              >
-                Send Message
-              </button>
-            </form>
           </div>
         </section>
       </main>
