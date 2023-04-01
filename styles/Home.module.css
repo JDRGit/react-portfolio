@@ -276,3 +276,22 @@
     transform: rotate(0deg);
   }
 }
+
+body, h1, h2, h3, p {
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.download-resume:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.profile-image-container {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

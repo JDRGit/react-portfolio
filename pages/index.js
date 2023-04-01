@@ -37,7 +37,7 @@ export default function Home() {
 
               <li>
                 <a
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500  text-white px-4 py-2 rounded-md ml-8 hover:from-pink-500 hover:to-yellow-500"
+                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:from-pink-500 hover:to-yellow-500 download-resume"
                   href={resume}
                   download="Jaime_D_Rodriguez_Resume.pdf"
                 >
@@ -67,6 +67,7 @@ export default function Home() {
               href="mailto:rodriguez.d.jaime@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="social-icon"
             >
               <AiOutlineMail />
             </a>
@@ -74,6 +75,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/jaime-d-rodriguez"
               target="_blank"
               rel="noopener noreferrer"
+              className="social-icon"
             >
               <AiFillLinkedin />
             </a>
@@ -81,12 +83,13 @@ export default function Home() {
               href="https://github.com/JDRGit"
               target="_blank"
               rel="noopener noreferrer"
+              className="social-icon"
             >
               <AiFillGithub />
             </a>
           </div>
 
-          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 profile-image-container">
             <Image
               src={dev}
               layout="fill"
@@ -119,7 +122,7 @@ export default function Home() {
           </div>
 
           <div className="lg:flex gap-10 ">
-            <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white ">
+            <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
               <Image src={design} width={100} height={100} alt="Design icon" />
               <h3 className="text-lg font-medium pt-8 pb-2 ">Frontend Tools</h3>
               <p className="py-2">
