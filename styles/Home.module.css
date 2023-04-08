@@ -295,3 +295,23 @@ body, h1, h2, h3, p {
 .profile-image-container {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.line {
+  transition: all 0.3s ease;
+}
+
+.line {
+  transition: all 0.3s ease;
+}
+
+.open.top {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.open.middle {
+  opacity: 0;
+}
+
+.open.bottom {
+  transform: translateY(-6px) rotate(-45deg);
+}
