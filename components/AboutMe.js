@@ -2,18 +2,29 @@ import Image from "next/image";
 import dev from "../public/dev.png";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Confetti from "react-confetti";
 
 export default function AboutMe() {
   const [isOpen, setIsOpen] = useState(false);
+  const [confetti, setConfetti] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleNameClick = () => {
+    setConfetti(true);
+    setTimeout(() => setConfetti(false), 8000);
+  };
+
   return (
     <section>
+      {confetti && <Confetti />}
       <div className="text-center px-10 py-8 space-y-4">
-        <h2 className="text-5xl text-teal-600 font-medium md:text-6xl">
+        <h2
+          className="text-5xl text-teal-600 font-medium md:text-6xl cursor-pointer"
+          onClick={handleNameClick}
+        >
           Jaime D. Rodriguez
         </h2>
         <div className="flex justify-center">
