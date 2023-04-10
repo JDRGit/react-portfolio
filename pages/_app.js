@@ -1,8 +1,8 @@
-import '@/styles/globals.css';
-import AppWrap from '@/components/AppWrap';
-import MotionWrap from '@/components/MotionWrap';
+import "@/styles/globals.css";
+import AppWrap from "@/components/AppWrap";
+import MotionWrap from "@/components/MotionWrap";
 
-export default function App({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
     <AppWrap>
       <MotionWrap>
@@ -11,3 +11,5 @@ export default function App({ Component, pageProps }) {
     </AppWrap>
   );
 }
+
+export default MyApp;

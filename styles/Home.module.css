@@ -97,7 +97,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -125,7 +125,7 @@
 
 .thirteen::before,
 .thirteen::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }
@@ -277,7 +277,11 @@
   }
 }
 
-body, h1, h2, h3, p {
+body,
+h1,
+h2,
+h3,
+p {
   transition: all 0.3s ease;
 }
 
@@ -315,3 +319,4 @@ body, h1, h2, h3, p {
 .open.bottom {
   transform: translateY(-6px) rotate(-45deg);
 }
+

@@ -17,8 +17,8 @@ export default function Header({ resume }) {
 
   return (
     <header>
-      <nav className="container mx-auto px-6 py-4  dark:text-gray-200">
-        <div className="flex items-center justify-between  dark:text-gray-200">
+      <nav className="container mx-auto px-6 py-4 dark:text-gray-200">
+        <div className="flex items-center justify-between dark:text-gray-200 space-x-10">
           <div>
             <div className="navbar-item">
               <button
@@ -58,23 +58,19 @@ export default function Header({ resume }) {
             </div>
           </div>
 
-          <ul className="flex items-center">
-            <li>
-              <BsFillMoonStarsFill
-                onClick={() => setDarkMode(!darkMode)}
-                className="cursor-pointer text-2xl dark:text-gray-200"
-              />
-            </li>
-            <li>
-              <a
-                className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:from-pink-500 hover:to-yellow-500 download-resume"
-                href={resume}
-                download="Jaime_D_Rodriguez_Resume.pdf"
-              >
-                Resume
-              </a>
-            </li>
-          </ul>
+          <div className="flex items-center space-x-5">
+            <BsFillMoonStarsFill
+              onClick={() => setDarkMode(!darkMode)}
+              className="cursor-pointer text-2xl dark:text-gray-200"
+            />
+            <a
+              className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md hover:from-pink-500 hover:to-yellow-500 download-resume"
+              href={resume}
+              download="Jaime_D_Rodriguez_Resume.pdf"
+            >
+              Resume
+            </a>
+          </div>
         </div>
       </nav>
     </header>

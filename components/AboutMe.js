@@ -8,13 +8,15 @@ export default function AboutMe() {
         <h2 className="text-5xl text-teal-600 font-medium md:text-6xl">
           Jaime D. Rodriguez
         </h2>
-        <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 profile-image-container">
-          <Image
-            src={dev}
-            layout="fill"
-            objectFit="scale-down"
-            alt="developer"
-          />
+        <div className="flex justify-center">
+          <div className="flex justify-center items-center gap-10 py-10 lg:flex-row lg:flex-wrap relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 profile-image-container">
+            <Image
+              src={dev}
+              layout="fill"
+              objectFit="scale-down"
+              alt="developer"
+            />
+          </div>
         </div>
         <h3 className="text-2xl md:text-3xl dark:text-gray-200">
           Software Engineer
