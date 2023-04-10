@@ -1,14 +1,22 @@
 import Image from "next/image";
 import dev from "../public/dev.png";
+import { useState } from "react";
+import {motion, AnimatePresence } from "framer-motion";
 
 export default function AboutMe() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <section>
       <div className="text-center px-10 py-8 space-y-4">
         <h2 className="text-5xl text-teal-600 font-medium md:text-6xl">
           Jaime D. Rodriguez
         </h2>
-        <div className="flex justify-center">
+        <div>
           <div className="flex justify-center items-center gap-10 py-10 lg:flex-row lg:flex-wrap relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 profile-image-container">
             <Image
               src={dev}
@@ -30,8 +38,19 @@ export default function AboutMe() {
       </div>
 
       <div className="flex flex-col justify-center text-justify">
-        <h3 className="text-3xl py-1 dark:text-white">About Me</h3>
-        <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+        <h3 className="text-3xl text-center py-1 text-teal-600 dark:text-white cursor-pointer "
+          onClick={handleClick}>About Me</h3>
+
+<AnimatePresence>
+          {isOpen && (
+            <motion.p
+              className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+        
           I am a Full Stack React Developer, having completed an intensive
           15-week remote technical training program at Per Scholas from November
           2022 to March 2023. Throughout the course, I gained hands-on
@@ -47,8 +66,11 @@ export default function AboutMe() {
           REST. I pride myself on my excellent problem-solving skills and
           ability to think like a software engineer. I'm now eager to apply my
           expertise to new job opportunities in the software development field.
-        </p>
+          </motion.p>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
 }
+ 
