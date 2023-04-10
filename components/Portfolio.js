@@ -65,7 +65,7 @@ const Portfolio = () => {
                   height={selectedId === project.id ? "100%" : "50"}
                   alt={project.name}
                 />
-                <motion.p layout className="text-xl font-semibold">
+                <motion.p layout className="text-xl font-medium pt-8 pb-2">
                   {project.name}
                 </motion.p>
               </motion.div>
