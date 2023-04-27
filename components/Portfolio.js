@@ -1,4 +1,3 @@
-// components/Portfolio.js
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";

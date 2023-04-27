@@ -3,7 +3,7 @@ import design from "../public/design.png";
 import code from "../public/code.png";
 import consulting from "../public/consulting.png";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+
 
 export default function Skills() {
   const [selectedId, setSelectedId] = useState(null);
@@ -47,33 +47,23 @@ export default function Skills() {
 
   return (
     <section>
-      <div className="lg:flex gap-10 ">
+      <div className="lg:flex gap-10">
         {skillItems.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white cursor-pointer"
-            onClick={() => handleClick(item.id)}
+            className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white"
           >
             <Image src={item.image} width={100} height={100} alt={item.alt} />
             <h3 className="text-lg font-medium pt-8 pb-2 text-teal-600">{item.title}</h3>
-            <AnimatePresence>
-              {selectedId === item.id && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <p className="py-2">{item.description}</p>
-                  <h4 className="py-4 text-teal-600">{item.toolsTitle}</h4>
-                  {item.tools.map((tool, index) => (
-                    <p key={index} className="text-gray-800 py-1">
-                      {tool}
-                    </p>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <div>
+              <p className="py-2">{item.description}</p>
+              <h4 className="py-4 text-teal-600">{item.toolsTitle}</h4>
+              {item.tools.map((tool, index) => (
+                <p key={index} className="text-gray-800 py-1">
+                  {tool}
+                </p>
+              ))}
+            </div>
           </div>
         ))}
       </div>
