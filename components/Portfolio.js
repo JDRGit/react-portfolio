@@ -12,11 +12,11 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      name: "E-commerce App",
+      name: "GratefulMe App",
       image: web1,
-      description: "An e-commerce application",
-      github: "https://github.com/user/repo",
-      netlify: "https://example.com/",
+      description: "An gratitude application",
+      github: "https://github.com/JDRGit/gratefulme-app",
+      netlify: "https://jaimedrodriguezgratefulme.netlify.app/",
     },
     {
       id: 2,
