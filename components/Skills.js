@@ -21,7 +21,7 @@ export default function Skills() {
       description:
         "Essential libraries and frameworks for building and styling responsive, dynamic, and user-friendly React user interfaces.",
       toolsTitle: "Some Tools I use",
-      tools: ["Visual Studio Code", "Styled-components", "Material-UI"],
+      tools: ["HTML 5", "CSS 3", "JavaScript", "TypeScript", "Next.JS", ],
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ export default function Skills() {
       description:
         "Key technologies for creating scalable and efficient server-side components, APIs, and databases to power full-stack React applications.",
       toolsTitle: "Development tools I use",
-      tools: ["Node.js", "MySQL", "Express.js"],
+      tools: ["Node.js", "Spring Boot", "Express.js"],
     },
     {
       id: 3,
@@ -41,7 +41,7 @@ export default function Skills() {
       description:
         "A collection of helpful tools and platforms for version control, code quality, package management, and development workflow optimization in full-stack React projects.",
       toolsTitle: "Programming languages I use",
-      tools: ["HTML", "CSS", "JavaScript", "Java"],
+      tools: ["Java", "Python", "SQL",],
     },
   ];
 
