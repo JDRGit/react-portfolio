@@ -6,10 +6,15 @@ import Confetti from "react-confetti";
 
 export default function AboutMe() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isTerminalOpen, setTerminalOpen] = useState(false);
   const [confetti, setConfetti] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleTerminalClick = () => {
+    setTerminalOpen(!isTerminalOpen);
   };
 
   const handleNameClick = () => {
@@ -46,18 +51,34 @@ export default function AboutMe() {
           processes. When I'm not coding, you can find me training for long
           distance races, hiking, reading, or exploring the latest technologies.
         </p>
-      </div>
-
-      <div className="flex flex-col justify-center text-justify">
-        <h3
-          className="text-3xl text-center py-1 text-teal-600 dark:text-white cursor-pointer "
-          onClick={handleClick}
+        <div
+          className="flex items-center justify-center"
+          onClick={handleTerminalClick}
         >
-          About Me
-        </h3>
-
+          <div className="w-56 h-48">
+            <div className="h-7 flex items-center px-2 rounded-t-md bg-gradient-to-b from-gray-700 to-gray-600">
+              <div className="flex items-center">
+                <button className="flex justify-center items-center px-0 mr-1 text-xs h-3 w-3 rounded-full bg-red-600"></button>
+                <button className="flex justify-center items-center px-0 mr-1 text-xs h-3 w-3 rounded-full bg-gray-600"></button>
+                <button className="flex justify-center items-center px-0 mr-1 text-xs h-3 w-3 rounded-full bg-green-600"></button>
+              </div>
+              <p className="text-gray-300 ml-1 text-sm">jaime@admin: ~</p>
+            </div>
+            <div className="bg-teal-600 h-full pt-0.5 -mt-0.5 text-sm rounded-b-md">
+              <div className="flex ml-1">
+                <span className="text-green-400 ml-1">jaime@admin:</span>
+                <span className="text-blue-500 ml-1">~</span>
+                <span className="text-gray-300 ml-1">$</span>
+                <span
+                  className
+                  className="block h-4 w-1 ml-2 animate-blink"
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
         <AnimatePresence>
-          {isOpen && (
+          {isTerminalOpen && (
             <motion.p
               className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200"
               initial={{ opacity: 0, height: 0 }}

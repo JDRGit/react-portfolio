@@ -320,3 +320,16 @@ p {
   transform: translateY(-6px) rotate(-45deg);
 }
 
+@keyframes blink {
+  0%, 49% {
+    background: #ffffff;
+  }
+
+  60%, 99% {
+    background: transparent;
+  }
+
+  100% {
+    background: #ffffff;
+  }
+}
