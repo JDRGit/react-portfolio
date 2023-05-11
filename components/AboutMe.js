@@ -42,14 +42,14 @@ export default function AboutMe() {
             />
           </div>
         </div>
-        <h3 className="text-2xl md:text-3xl dark:text-gray-200">
+        <h3 className="text-3xl md:text-3xl dark:text-gray-200">
           Software Engineer
         </h3>
         <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-gray-200">
           Hi there! welcome to my website. I enjoy developing web solutions that
           help individuals and companies address challenges and streamline
           processes. When I'm not coding, you can find me training for long
-          distance races, hiking, reading, or exploring the latest technologies.
+          distance races 🏃🏽‍♂️, hiking 🥾, reading 📚, or exploring the latest technologies 👨🏽‍💻.
         </p>
         <div
           className="flex items-center justify-center"
