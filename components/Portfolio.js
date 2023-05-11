@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 import web1 from "../public/web1.png";
 import web2 from "../public/web2.png";
 import web3 from "../public/web3.png";
+
 
 const Portfolio = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -44,60 +46,60 @@ const Portfolio = () => {
       <h2 className="text-3xl font-semibold text-center mb-8  dark:text-gray-200">Portfolio</h2>
       <MotionConfig>
         <div className="flex flex-col gap-10 px-4 lg:px-0 py-10 lg:flex-row lg:flex-wrap">
-          {projects.map((project) => (
-            <motion.div
-              key={project.id}
-              className="basis-1/2 flex-1 bg-white rounded-lg shadow-md p-4 cursor-pointer"
-              layout
-              onClick={() => handleClick(project.id)}
+        {projects.map((project) => (
+  <motion.div
+    key={project.id}
+    className="flex flex-col gap-6 bg-white rounded-lg shadow-lg p-4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+    layout
+    onClick={() => handleClick(project.id)}
+  >
+    <motion.div
+      layout
+      className={`flex flex-col items-center ${
+        selectedId === project.id ? "space-y-4" : ""
+      }`}
+    >
+      <div className="relative w-full h-60">
+        <Image
+          src={project.image}
+          layout="fill"
+          className="rounded-lg object-cover"
+          alt={project.name}
+        />
+      </div>
+      <motion.h3 layout className="text-xl font-medium pt-2">
+        {project.name}
+      </motion.h3>
+    </motion.div>
+    <AnimatePresence>
+      {selectedId === project.id && (
+        <>
+          <motion.p layout className="text-gray-700">
+            {project.description}
+          </motion.p>
+          <motion.div
+            layout
+            className="flex items-center justify-between"
+          >
+            <a
+              href={project.github}
+              className="flex items-center space-x-2 text-blue-500 hover:text-blue-600"
             >
-              <motion.div
-                layout
-                className={`flex flex-col items-center ${
-                  selectedId === project.id ? "space-y-4" : ""
-                }`}
-              >
-                <Image
-                  src={project.image}
-                  className="rounded-lg object-cover"
-                  width={selectedId === project.id ? "100%" : "50"}
-                  height={selectedId === project.id ? "100%" : "50"}
-                  alt={project.name}
-                />
-                <motion.p layout className="text-xl font-medium pt-8 pb-2">
-                  {project.name}
-                </motion.p>
-              </motion.div>
-              <AnimatePresence>
-                {selectedId === project.id && (
-                  <>
-                    <motion.p
-                      layout
-                      className="mt-4 text-gray-700 text-center"
-                    >
-                      {project.description}
-                    </motion.p>
-                    <motion.div
-                      layout
-                      className="mt-4 flex space-x-4 justify-center"
-                    >
-                      <a
-                        href={project.github}
-                        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-                      >
-                        Github
-                      </a>
-                      <a
-                        href={project.netlify}
-                        className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-                      >
-                        Netlify
-                      </a>
-                    </motion.div>
-                  </>
-                )}
-              </AnimatePresence>
-            </motion.div>
+              <FiGithub />
+              <span>Github</span>
+            </a>
+            <a
+              href={project.netlify}
+              className="flex items-center space-x-2 text-green-500 hover:text-green-600"
+            >
+              <FiExternalLink />
+              <span>Netlify</span>
+            </a>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  </motion.div>
           ))}
         </div>
       </MotionConfig>
