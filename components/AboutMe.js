@@ -69,10 +69,7 @@ export default function AboutMe() {
                 <span className="text-green-400 ml-1">jaime@admin:</span>
                 <span className="text-blue-500 ml-1">~</span>
                 <span className="text-gray-300 ml-1">$</span>
-                <span
-                  className
-                  className="block h-4 w-1 ml-2 animate-blink"
-                ></span>
+                <span className="block h-4 w-1 ml-2 animate-blink"></span>
               </div>
             </div>
           </div>
