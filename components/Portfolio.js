@@ -20,11 +20,11 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      name: "Fitness App",
+      name: "Oragnic Coffee Shop",
       image: web2,
-      description: "Coming Soon, A fitness tracking application",
-      github: "https://github.com/user/repo",
-      netlify: "https://example.com/",
+      description: "Organic Coffee Shop e-commerce platform of ethically sourced coffee",
+      github: "https://github.com/JDRGit/organic-coffee-shop",
+      netlify: "https://jaimesorganiccoffeeshop.netlify.app/",
     },
     {
       id: 3,
