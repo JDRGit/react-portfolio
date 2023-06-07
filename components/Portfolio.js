@@ -20,7 +20,7 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      name: "Oragnic Coffee Shop",
+      name: "Organic Coffee Shop",
       image: web2,
       description: "Organic Coffee Shop e-commerce platform of ethically sourced coffee",
       github: "https://github.com/JDRGit/organic-coffee-shop",
