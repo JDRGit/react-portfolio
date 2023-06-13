@@ -14,7 +14,7 @@ const Portfolio = () => {
       id: 1,
       name: "GratefulMe App",
       image: web1,
-      description: "A wellnes gratitude application",
+      description: "A wellness gratitude app to help you keep track of your daily gratitude",
       github: "https://github.com/JDRGit/gratefulme-app",
       netlify: "https://jaimedrodriguezgratefulme.netlify.app/",
     },
