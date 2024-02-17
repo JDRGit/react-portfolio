@@ -12,27 +12,27 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      name: "GratefulMe App",
+      name: "Pharmacy Tech Toolbox",
       image: web1,
+      description: "A website for pharmacy technicians to study for the PTCB exam.",
+      github: "https://github.com/JDRGit/pharmacytech-blog",
+      netlify: "https://www.pharmacytechtoolbox.com/"
+    },
+    {
+      id: 2,
+      name: "GratefulMe App",
+      image: web2,
       description: "A wellness gratitude app to help you keep track of your daily gratitude",
       github: "https://github.com/JDRGit/gratefulme-app",
       netlify: "https://jaimedrodriguezgratefulme.netlify.app/",
     },
     {
-      id: 2,
+      id: 3,
       name: "Organic Coffee Shop",
-      image: web2,
+      image: web3,
       description: "Organic Coffee Shop e-commerce platform of ethically sourced coffee",
       github: "https://github.com/JDRGit/organic-coffee-shop",
       netlify: "https://jaimesorganiccoffeeshop.netlify.app/",
-    },
-    {
-      id: 3,
-      name: "Social Media App",
-      image: web3,
-      description: "Coming Soon, A social media application",
-      github: "https://github.com/user/repo",
-      netlify: "https://example.com/",
     },
   ];
 
