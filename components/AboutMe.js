@@ -9,10 +9,6 @@ export default function AboutMe() {
   const [isTerminalOpen, setTerminalOpen] = useState(false);
   const [confetti, setConfetti] = useState(false);
 
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
-
   const handleTerminalClick = () => {
     setTerminalOpen(!isTerminalOpen);
   };
@@ -36,14 +32,14 @@ export default function AboutMe() {
           <div className="flex justify-center items-center gap-10 py-10 lg:flex-row lg:flex-wrap relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 profile-image-container">
             <Image
               src={dev}
-              layout="fill"
-              objectFit="scale-down"
+              fill
+              objectFit="contain"
               alt="developer"
             />
           </div>
         </div>
         <h3 className="text-3xl md:text-3xl dark:text-gray-200">
-          Software Engineer
+          Software Developer
         </h3>
         <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-gray-200">
           Hi there! welcome to my website. I enjoy developing web solutions that

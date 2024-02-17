@@ -4,13 +4,8 @@ import code from "../public/code.png";
 import consulting from "../public/consulting.png";
 import { useState } from "react";
 
-
 export default function Skills() {
   const [selectedId, setSelectedId] = useState(null);
-
-  const handleClick = (id) => {
-    setSelectedId(selectedId === id ? null : id);
-  };
 
   const skillItems = [
     {
@@ -21,7 +16,7 @@ export default function Skills() {
       description:
         "Essential libraries and frameworks for building and styling responsive, dynamic, and user-friendly React user interfaces.",
       toolsTitle: "Some Tools I use",
-      tools: ["HTML 5", "CSS 3", "JavaScript", "TypeScript", "Next.JS", ],
+      tools: ["HTML 5", "CSS 3", "JavaScript", "TypeScript", "Next.JS"],
     },
     {
       id: 2,
@@ -41,7 +36,7 @@ export default function Skills() {
       description:
         "A collection of helpful tools and platforms for version control, code quality, package management, and development workflow optimization in full-stack React projects.",
       toolsTitle: "Programming languages I use",
-      tools: ["Java", "Python", "SQL",],
+      tools: ["Java", "Python", "SQL"],
     },
   ];
 
@@ -54,7 +49,9 @@ export default function Skills() {
             className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white"
           >
             <Image src={item.image} width={100} height={100} alt={item.alt} />
-            <h3 className="text-lg font-medium pt-8 pb-2 text-teal-600">{item.title}</h3>
+            <h3 className="text-lg font-medium pt-8 pb-2 text-teal-600">
+              {item.title}
+            </h3>
             <div>
               <p className="py-2">{item.description}</p>
               <h4 className="py-4 text-teal-600">{item.toolsTitle}</h4>
