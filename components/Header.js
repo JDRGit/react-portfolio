@@ -2,7 +2,7 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState, useEffect } from "react";
 import AnimatedMenu from "./AnimatedMenu";
 
-export default function Header({ resume }) {
+export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -63,13 +63,6 @@ export default function Header({ resume }) {
               onClick={() => setDarkMode(!darkMode)}
               className="cursor-pointer text-2xl dark:text-gray-200"
             />
-            <a
-              className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md hover:from-pink-500 hover:to-yellow-500 download-resume"
-              href={resume}
-              download="Jaime_D_Rodriguez_Resume.pdf"
-            >
-              Resume
-            </a>
           </div>
         </div>
       </nav>
