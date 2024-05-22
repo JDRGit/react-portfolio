@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
 import Portfolio from "../components/Portfolio";
-import resume from "../public/resume.pdf";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,7 +16,7 @@ export default function Home() {
       </Head>
 
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
-        <Header resume={resume} />
+        <Header />
         <AboutMe />
         <Skills />
         <Portfolio />
